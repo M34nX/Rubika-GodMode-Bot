@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>گزارش‌ها</title>
+</head>
+
+<body>
+    <div class="logs-container">
+        <h1>📜 گزارش‌های ربات</h1>
+
+        <div id="logs">
+            <p>در حال بارگذاری گزارش‌ها...</p>
+        </div>
+
+        <button onclick="clearLogs()">🧹 پاک کردن گزارش‌ها</button>
+
+        <footer>
+            <p>© 2025 ربات پیشرفته - مدیریت حرفه‌ای</p>
+        </footer>
+    </div>
+
+    <script>
+        // گرفتن گزارش‌ها به‌صورت زنده
+        async function fetchLogs() {
+            const response = await fetch('/logs');
+            const data = await response.json();
+
+            const logsContainer = document.getElementById('logs');
+            logsContainer.innerHTML = data.logs.map(log => `<p>🛠️ ${log}</p>`).join('');
+        }
+
+        // پاک کردن گزارش‌ها
+        async function clearLogs() {
+            await fetch('/clear_logs', { method: 'POST' });
+            fetchLogs();
+        }
+
+        // به‌روزرسانی هر 3 ثانیه
+        fetchLogs();
+        setInterval(fetchLogs, 3000);
+    </script>
+</body>
+  </html
