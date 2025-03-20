@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>قفل امنیتی</title>
+</head>
+
+<body>
+    <div class="lockscreen-container">
+        <h1>🔒 قفل امنیتی</h1>
+
+        <form action="/unlock" method="post">
+            <label for="password">رمز عبور:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">باز کردن قفل</button>
+        </form>
+
+        <p class="error" style="display: none;">❌ رمز اشتباه است!</p>
+
+        <footer>
+            <p>© 2025 ربات پیشرفته - امنیت غیرقابل نفوذ</p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (event) => {
+            const password = document.getElementById("password").value;
+            if (password !== "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") {
+                event.preventDefault();
+                document.querySelector(".error").style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html
