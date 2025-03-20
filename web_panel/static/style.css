@@ -1,0 +1,88 @@
+/* --- طراحی کلی پنل --- */
+body {
+    font-family: 'Vazir', Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* --- استایل ظرف اصلی --- */
+.container, .logs-container {
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* --- عنوان‌ها --- */
+h1 {
+    font-size: 24px;
+    color: #00ffff;
+}
+
+/* --- دکمه‌ها --- */
+button {
+    background: #00ffff;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #03d6d6;
+}
+
+/* --- استایل گزارش‌ها --- */
+#logs {
+    background: #222;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+/* --- استایل قفل امنیتی --- */
+#lockscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- استایل ورودی رمز --- */
+input[type="password"] {
+    background: #222;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* --- استایل پیغام خطا --- */
+#error-message {
+    color: #ff3333;
+    margin-top: 10px;
+}
+
+/* --- استایل فوتر --- */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
