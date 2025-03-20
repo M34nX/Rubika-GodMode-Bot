@@ -1,0 +1,78 @@
+{
+  "report_date": "2025-03-20",
+  "bot_status": "active",
+  "total_groups": 12,
+  "total_users": 1476,
+  "activities": [
+    {
+      "timestamp": "14:30:05",
+      "event": "bot_started",
+      "details": "Bot successfully started and connected to Rubika servers."
+    },
+    {
+      "timestamp": "14:32:22",
+      "event": "user_joined",
+      "user_id": "13789322",
+      "username": "Ali_pro",
+      "group": "Tech_Support"
+    },
+    {
+      "timestamp": "14:33:40",
+      "event": "user_message",
+      "user_id": "14896555",
+      "username": "Sara_coder",
+      "group": "Python_Dev",
+      "message": "Hey guys, how can I connect to Rubika API?"
+    },
+    {
+      "timestamp": "14:34:12",
+      "event": "command_executed",
+      "user_id": "13789322",
+      "username": "Ali_pro",
+      "command": "/add_admin",
+      "target_user": "14896555",
+      "status": "success"
+    },
+    {
+      "timestamp": "14:35:50",
+      "event": "anti_spam_triggered",
+      "user_id": "15648779",
+      "username": "SpamBot",
+      "group": "Gaming_Talks",
+      "action": "user_banned"
+    },
+    {
+      "timestamp": "14:37:10",
+      "event": "file_uploaded",
+      "user_id": "14563278",
+      "username": "Reza_dev",
+      "group": "AI_Community",
+      "file_name": "project.zip",
+      "file_size": "12MB"
+    },
+    {
+      "timestamp": "14:39:05",
+      "event": "update_detected",
+      "source": "GitHub",
+      "new_version": "v2.1.3",
+      "auto_update": "enabled",
+      "status": "updated successfully"
+    },
+    {
+      "timestamp": "14:40:30",
+      "event": "suspicious_activity",
+      "user_id": "Unknown",
+      "ip": "192.168.100.45",
+      "action": "Unauthorized access attempt",
+      "result": "blocked"
+    }
+  ],
+  "summary": {
+    "new_users_today": 42,
+    "messages_today": 368,
+    "commands_executed": 27,
+    "files_uploaded": 8,
+    "bans_triggered": 3,
+    "suspicious_attempts": 2
+  }
+  }
